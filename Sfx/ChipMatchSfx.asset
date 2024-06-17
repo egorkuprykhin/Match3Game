@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac54f4bbe5a748abb3ce2b888e8a4a8b, type: 3}
   m_Name: ChipMatchSfx
   m_EditorClassIdentifier: 
-  AudioClip: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: b6a413448169c4afdaa009e79d227d32, type: 3}
