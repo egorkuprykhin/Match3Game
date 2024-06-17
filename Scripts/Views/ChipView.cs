@@ -1,5 +1,6 @@
 using System;
 using Infrastructure.Services;
+using Match3Game.Settings;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -48,6 +49,11 @@ namespace Match3Game.Views
         public void SetPosition(Vector2 anchoredPosition)
         {
             Transform.anchoredPosition = anchoredPosition;
+        }
+
+        public void SetSize()
+        {
+            Transform.sizeDelta = _settings.GetSettings<Match3GameSettings>().ChipSize;
         }
 
         public void OnBeginDrag(PointerEventData eventData)

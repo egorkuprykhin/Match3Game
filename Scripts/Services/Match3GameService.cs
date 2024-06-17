@@ -43,6 +43,7 @@ namespace Core.Services
             _gameFactory = ServiceLocator.GetService<Match3GameFactory>();
             _scoresService = ServiceLocator.GetService<ScoresService>();
             _fieldLinesCache = ServiceLocator.GetService<FieldLinesCache>();
+            _sceneData = ServiceLocator.GetService<Match3SceneDataService>();
             // _targetsService = ServiceLocator.GetService<TargetsService>();
             
             _gameSettings = _configurationService.Configuration.GetSettings<Match3GameSettings>();
@@ -52,6 +53,7 @@ namespace Core.Services
 
         public void CreateField()
         {
+            RoundField();
             CreateFieldInternal();
             _fieldLinesCache.CacheActiveLines();
         }
@@ -101,6 +103,7 @@ namespace Core.Services
             
             chip.SetPosition(new Vector2(posX, posY));
             chip.SetCoordinates(i, j);
+            chip.SetSize();
             
             _chips[i, j] = chip;
             
@@ -415,6 +418,14 @@ namespace Core.Services
         private bool ChipExistInCell(int i, int j)
         {
             return _gameSettings.FieldIncludeCell(i, j);
+        }
+        
+        private void RoundField()
+        {
+            Vector2Int halfCellSize = _gameSettings.CellSize / 2;
+            Vector2 containerPosition = new Vector2(halfCellSize.x, halfCellSize.y);
+            
+            _sceneData.FieldRoundRoot.anchoredPosition = containerPosition;
         }
     }
 }

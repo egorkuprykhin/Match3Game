@@ -12,8 +12,9 @@ namespace Match3Game.Settings
         [SerializeField] public Vector2Int FieldSize;  
         [SerializeField] public List<FieldOverride> FieldOverrides; 
         [SerializeField] public Vector2Int CellSize;
-        [SerializeField, Range(0,100)] public int TwoStarsTimeLeftPercent;
-        [SerializeField, Range(0,100)] public int ThreeStarsTimeLeftPercent;
+        [SerializeField] public Vector2 ChipSize;
+        // [SerializeField, Range(0,100)] public int TwoStarsTimeLeftPercent;
+        // [SerializeField, Range(0,100)] public int ThreeStarsTimeLeftPercent;
         [SerializeField] public List<Sprite> Chips;
 
         public bool FieldIncludeCell(int i, int j)
