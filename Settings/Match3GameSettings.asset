@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 322f08ab336846afa1f3d936edef7ccc, type: 3}
+  m_Name: Match3GameSettings
+  m_EditorClassIdentifier: 
+  FieldSize: {x: 5, y: 5}
+  FieldOverrides: []
+  CellSize: {x: 100, y: 100}
+  ThreeStarsTimeLeftPercent: 50
+  TwoStarsTimeLeftPercent: 25
+  Chips:
+  - {fileID: 21300000, guid: 2465a3ac722ae4ffea11d851680f6d6f, type: 3}
+  - {fileID: 21300000, guid: 793c0a06efde34d138482aaaeef1d487, type: 3}
+  - {fileID: 21300000, guid: d5ca13ba46eb54b7184534b74b1cbd97, type: 3}
+  - {fileID: 21300000, guid: 5fb89a25e9900428fb8773a2c34df273, type: 3}
