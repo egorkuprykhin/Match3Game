@@ -190,6 +190,8 @@ namespace Core.Services
                     .AppendCallback(() =>
                         OnChipDragComplete(chip, targetChip).Forget());
             }
+            else
+                OnChipDragFailed(chip);
         }
 
         private async UniTaskVoid OnChipDragComplete(ChipView chip, ChipView targetChip)
