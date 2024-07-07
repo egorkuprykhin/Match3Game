@@ -12,12 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 322f08ab336846afa1f3d936edef7ccc, type: 3}
   m_Name: Match3GameSettings
   m_EditorClassIdentifier: 
-  FieldSize: {x: 6, y: 6}
-  FieldOverrides: []
-  CellSize: {x: 67, y: 70}
+  FieldSize: {x: 5, y: 7}
+  FieldOverrides:
+  - I: 0
+    J: 0
+    Included: 0
+  - I: 0
+    J: 6
+    Included: 0
+  - I: 4
+    J: 6
+    Included: 0
+  - I: 4
+    J: 0
+    Included: 0
+  CellSize: {x: 76, y: 75}
   ChipSize: {x: 64, y: 64}
   Chips:
-  - {fileID: 21300000, guid: 2465a3ac722ae4ffea11d851680f6d6f, type: 3}
-  - {fileID: 21300000, guid: 793c0a06efde34d138482aaaeef1d487, type: 3}
-  - {fileID: 21300000, guid: d5ca13ba46eb54b7184534b74b1cbd97, type: 3}
-  - {fileID: 21300000, guid: 5fb89a25e9900428fb8773a2c34df273, type: 3}
+  - {fileID: 21300000, guid: a5be86f89a045430bb5540943362c367, type: 3}
+  - {fileID: 21300000, guid: a356b7c71199d45fdbcc36018ad796e8, type: 3}
+  - {fileID: 21300000, guid: 295da2646797d4bd4ad2b08425c76df7, type: 3}
+  - {fileID: 21300000, guid: 3564b38b1104c42039cd2b66fbddcbbd, type: 3}
+  - {fileID: 21300000, guid: 7ccd7bf7aa5c943b4b77f18daae717de, type: 3}
+  - {fileID: 21300000, guid: 43a4a4834409e4d329713415ebf191c8, type: 3}
+  - {fileID: 21300000, guid: 40c7f54d5b9e5402a828dbd03acaa43d, type: 3}

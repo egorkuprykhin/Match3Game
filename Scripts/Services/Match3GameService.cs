@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
+using Core.Game;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using Infrastructure.Extensions;
@@ -15,7 +16,7 @@ using Object = UnityEngine.Object;
 
 namespace Core.Services
 {
-    public class Match3GameService : IInitializableService
+    public class Match3GameService : IGameService
     {
         private ChipView[,] _chips;
         private HashSet<ChipView> _matchedChips = new HashSet<ChipView>();
@@ -56,6 +57,8 @@ namespace Core.Services
             RoundField();
             CreateFieldInternal();
             _fieldLinesCache.CacheActiveLines();
+            
+            ClearInitialMatches();
         }
 
         public void ClearInitialMatches()

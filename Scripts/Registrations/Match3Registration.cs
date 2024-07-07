@@ -1,3 +1,4 @@
+using Core.Game;
 using Core.Services;
 using Infrastructure.Core;
 using Infrastructure.Services;
@@ -11,16 +12,14 @@ namespace Match3Game.Registrations
     {
         [SerializeField] private Match3ConfigurationService Match3ConfigurationService;
         
-        protected override void RegisterServices(IRegistrar registrar)
+        protected override void RegisterServices(IServicesRegistrar registrar)
         {
             registrar.Register<IConfigurationService, Match3ConfigurationService>(Match3ConfigurationService);
             
-            registrar.Register<IGameStarterService, Match3GameStarter>();
-            registrar.Register<IGameFinisherService, Match3GameFinisher>();
+            registrar.Register<IGameService, Match3GameService>();
             
             registrar.Register<FieldLinesCache>();
             registrar.Register<ChipTypesService>();
-            registrar.Register<Match3GameService>();
         }
     }
 }
