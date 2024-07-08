@@ -17,6 +17,7 @@ namespace Match3Game.Registrations
             registrar.Register<IConfigurationService, Match3ConfigurationService>(Match3ConfigurationService);
             
             registrar.Register<IGameService, Match3GameService>();
+            registrar.Register<ITargetsService, TargetsService>();
             
             registrar.Register<FieldLinesCache>();
             registrar.Register<ChipTypesService>();

@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75bb5b958e214ae0881148d2718eb464, type: 3}
+  m_Script: {fileID: 11500000, guid: ca653554358e35e70e84ac999ad0e2b5, type: 3}
   m_Name: Match3SfxSettings
   m_EditorClassIdentifier: 
-  ChipSwap: {fileID: 11400000, guid: 20fea9c074ac74125908b3f98335e8c6, type: 2}
-  ChipSwapFailed: {fileID: 11400000, guid: c8a6cad40cf19488e901c6360601318e, type: 2}
-  ChipMatch: {fileID: 11400000, guid: 3ec8a8e4f660e49b29a24af4bd52c744, type: 2}
-  ChipAppear: {fileID: 11400000, guid: 9b5aa6391c35849a0b5167c743fd135c, type: 2}
+  ChipSwap: {fileID: 11400000, guid: 8e0ccab693ab19417405339fcbc19213, type: 2}
+  ChipSwapFailed: {fileID: 11400000, guid: 5e9c822718da3641fa9c1631a532391d, type: 2}
+  ChipMatch: {fileID: 11400000, guid: 090226d010ba8660b9e793acf4bfaa8f, type: 2}
+  ChipAppear: {fileID: 11400000, guid: ff05fb60684367bfce3c3f3e50bd7239, type: 2}

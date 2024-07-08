@@ -9,12 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 489f2fdbb7a1429dbb474e906a74feb6, type: 3}
+  m_Script: {fileID: 11500000, guid: 7be3b04a03c4d4619d9a132960713ed5, type: 3}
   m_Name: Match3AnimationSettings
   m_EditorClassIdentifier: 
-  ChipSwapTime: 0.15
+  ChipSwapTime: 0.12
   ChipSwapEase: 10
-  ChipDestroyTime: 0.17
-  ChipDestroyEase: 13
-  ChipAppearTime: 0.17
-  ChipAppearEase: 8
+  ChipDestroyTime: 0.15
+  ChipDestroyEase: 10
+  ChipAppearTime: 0.15
+  ChipAppearEase: 10

@@ -8,6 +8,7 @@ namespace Match3Game.Settings
     {
         [SerializeField] public int TargetsTypesCount;
         [SerializeField] public int InitialTargetsCount;
+        [SerializeField] public float DelayBeforeWin;
         [SerializeField] public int ProgressiveTargetsCount;
     }
 }

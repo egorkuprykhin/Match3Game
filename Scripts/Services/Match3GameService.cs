@@ -30,7 +30,7 @@ namespace Core.Services
         private ScoresService _scoresService;
         private Match3SceneDataService _sceneData;
         private FieldLinesCache _fieldLinesCache;
-        // private TargetsService _targetsService;
+        private ITargetsService _targetsService;
         
         private Match3GameSettings _gameSettings;
         private Match3AnimationSettings _animationSettings;
@@ -45,7 +45,7 @@ namespace Core.Services
             _scoresService = ServiceLocator.GetService<ScoresService>();
             _fieldLinesCache = ServiceLocator.GetService<FieldLinesCache>();
             _sceneData = ServiceLocator.GetService<Match3SceneDataService>();
-            // _targetsService = ServiceLocator.GetService<TargetsService>();
+             _targetsService = ServiceLocator.GetService<ITargetsService>();
             
             _gameSettings = _configurationService.Configuration.GetSettings<Match3GameSettings>();
             _animationSettings = _configurationService.Configuration.GetSettings<Match3AnimationSettings>();
@@ -61,7 +61,12 @@ namespace Core.Services
             ClearInitialMatches();
         }
 
-        public void ClearInitialMatches()
+        public void ClearField()
+        {
+            ClearFieldInternal();
+        }
+
+        private void ClearInitialMatches()
         {
             CollectMatches();
 
@@ -84,11 +89,6 @@ namespace Core.Services
             }
             
             _matchedChips.Clear();
-        }
-
-        public void ClearField()
-        {
-            ClearFieldInternal();
         }
 
         private ChipView CreateChip(int i, int j, Sprite sprite = null)
@@ -278,7 +278,7 @@ namespace Core.Services
             
             foreach (ChipView chip in _matchedChips)
             {
-                // _targetsService.CollectTarget(chip.Type);
+                _targetsService?.CollectTarget(chip.Type);
                 RemoveChipAnimated(chip);
             }
             

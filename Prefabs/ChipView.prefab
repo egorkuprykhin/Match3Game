@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2734322360458169166}
-  - component: {fileID: 6515669469043790069}
+  - component: {fileID: 2526958682364077541}
   - component: {fileID: 2285410903062853057}
   m_Layer: 0
   m_Name: ChipView
@@ -38,7 +38,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &6515669469043790069
+--- !u!114 &2526958682364077541
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -47,7 +47,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 859834677236309361}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ca7469588824e7da501bd905ae5c4d1, type: 3}
+  m_Script: {fileID: 11500000, guid: 7bf8d685b289935268c4b2a352db5526, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Transform: {fileID: 2734322360458169166}
