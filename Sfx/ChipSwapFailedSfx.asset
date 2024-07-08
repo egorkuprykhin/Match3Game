@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9c02e894f8f9d46fa9036eb7ce95eaf, type: 3}
   m_Name: ChipSwapFailedSfx
   m_EditorClassIdentifier: 
-  AudioClip: {fileID: 8300000, guid: 56cab576fa34c09d58c84b8ad762ee16, type: 3}
+  AudioClip: {fileID: 8300000, guid: f49f99eba4a1044298c3e0ac3f7aaebc, type: 3}

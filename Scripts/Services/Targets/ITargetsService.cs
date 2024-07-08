@@ -10,6 +10,8 @@ namespace Match3Game.Services
         public void CreateTargets();
         
         public void CollectTarget(Sprite type);
+        
+        public bool Enabled { get; }
 
         public event Action<Sprite> TargetUpdated;
         

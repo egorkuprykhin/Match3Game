@@ -16,19 +16,24 @@ namespace Infrastructure.Services
         private Configuration _configuration;
         private ChipTypesService _chipTypesService;
         private TargetsSettings _targetsSettings;
-        private IConfigurationService _configurationService;
+        private ConfigurationService _configurationService;
+        private SfxService _soundService;
 
+        public bool Enabled => _targetsSettings.UseTargets;
+        
         public event Action TargetsCollected;
         public event Action<Sprite> TargetUpdated;
 
         public bool AllTargetsCollected => Targets.All(target => target.Collected);
         public float DelayBeforeWin => _targetsSettings.DelayBeforeWin;
 
+
         public void Initialize()
         {
             _chipTypesService = ServiceLocator.GetService<ChipTypesService>();
-            _configurationService = ServiceLocator.GetService<IConfigurationService>();
-            _targetsSettings = _configurationService.Configuration.GetSettings<TargetsSettings>();
+            _configurationService = ServiceLocator.GetService<ConfigurationService>();
+            _targetsSettings = _configurationService.GetSettings<TargetsSettings>();
+            _soundService = ServiceLocator.GetService<SfxService>();
         }
 
         public void CreateTargets()
@@ -55,6 +60,9 @@ namespace Infrastructure.Services
             {
                 targetData.CollectTarget(1);
                 TargetUpdated?.Invoke(type);
+                
+                if (!targetData.Collected)
+                    _soundService.PlaySfx(_targetsSettings.TargetCollectedSound);
             }
 
             if (AllTargetsCollected) 
