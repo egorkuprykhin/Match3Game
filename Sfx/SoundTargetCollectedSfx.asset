@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d9c02e894f8f9d46fa9036eb7ce95eaf, type: 3}
-  m_Name: ChipSwapFailedSfx
+  m_Name: SoundTargetCollectedSfx
   m_EditorClassIdentifier: 
-  AudioClip: {fileID: 8300000, guid: f49f99eba4a1044298c3e0ac3f7aaebc, type: 3}
+  AudioClip: {fileID: 8300000, guid: c6a4796d49b4c47d3a8dd94a1fa8e36a, type: 3}
