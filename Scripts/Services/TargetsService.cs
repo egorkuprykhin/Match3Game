@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Core.Services;
 using Infrastructure.Common;
+using Infrastructure.Data;
 using Match3Game.Services;
 using Match3Game.Settings;
 using UnityEngine;
