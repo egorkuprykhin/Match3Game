@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using Infrastructure.Common;
 using Infrastructure.Data;
+using Infrastructure.Settings;
 using Match3Game.Services;
-using Match3Game.Settings;
 using UnityEngine;
 
 namespace Infrastructure.Services
